@@ -1,3 +1,4 @@
+from __future__ import absolute_import
 import os
 import subprocess
 from collections import namedtuple
@@ -8,8 +9,12 @@ from object_detection.protos import pipeline_pb2
 from object_detection.protos import image_resizer_pb2
 from object_detection import exporter
 
+#from .graph_utils import force_nms_cpu as f_force_nms_cpu
+#from .graph_utils import force_2ndstage_cpu as f_force_2ndstage_cpu
+#from .graph_utils import replace_relu6 as f_replace_relu6
+#from .graph_utils import remove_assert as f_remove_assert
+
 from .graph_utils import force_nms_cpu as f_force_nms_cpu
-from .graph_utils import force_2ndstage_cpu as f_force_2ndstage_cpu
 from .graph_utils import replace_relu6 as f_replace_relu6
 from .graph_utils import remove_assert as f_remove_assert
 
